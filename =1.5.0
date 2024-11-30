@@ -1,0 +1,21 @@
+Looking in indexes: http://mirrors.aliyun.com/pypi/simple
+Collecting openai
+  Downloading http://mirrors.aliyun.com/pypi/packages/c7/d8/3e4cf8a5f544bef575d3502fedd81a15e317f591022de940647bdd0cc017/openai-1.54.4-py3-none-any.whl (389 kB)
+Requirement already satisfied: anyio<5,>=3.5.0 in /root/miniconda3/envs/llama/lib/python3.11/site-packages (from openai) (4.6.0)
+Collecting distro<2,>=1.7.0 (from openai)
+  Downloading http://mirrors.aliyun.com/pypi/packages/12/b3/231ffd4ab1fc9d679809f356cebee130ac7daa00d6d6f3206dd4fd137e9e/distro-1.9.0-py3-none-any.whl (20 kB)
+Requirement already satisfied: httpx<1,>=0.23.0 in /root/miniconda3/envs/llama/lib/python3.11/site-packages (from openai) (0.27.2)
+Collecting jiter<1,>=0.4.0 (from openai)
+  Downloading http://mirrors.aliyun.com/pypi/packages/62/02/1dacf3b95d13f36298a261723c52b45701db485ee104f7677cb931697395/jiter-0.7.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (325 kB)
+Requirement already satisfied: pydantic<3,>=1.9.0 in /root/miniconda3/envs/llama/lib/python3.11/site-packages (from openai) (2.9.2)
+Requirement already satisfied: sniffio in /root/miniconda3/envs/llama/lib/python3.11/site-packages (from openai) (1.3.1)
+Requirement already satisfied: tqdm>4 in /root/miniconda3/envs/llama/lib/python3.11/site-packages (from openai) (4.66.5)
+Requirement already satisfied: typing-extensions<5,>=4.11 in /root/miniconda3/envs/llama/lib/python3.11/site-packages (from openai) (4.12.2)
+Requirement already satisfied: idna>=2.8 in /root/miniconda3/envs/llama/lib/python3.11/site-packages (from anyio<5,>=3.5.0->openai) (3.10)
+Requirement already satisfied: certifi in /root/miniconda3/envs/llama/lib/python3.11/site-packages (from httpx<1,>=0.23.0->openai) (2024.8.30)
+Requirement already satisfied: httpcore==1.* in /root/miniconda3/envs/llama/lib/python3.11/site-packages (from httpx<1,>=0.23.0->openai) (1.0.6)
+Requirement already satisfied: h11<0.15,>=0.13 in /root/miniconda3/envs/llama/lib/python3.11/site-packages (from httpcore==1.*->httpx<1,>=0.23.0->openai) (0.14.0)
+Requirement already satisfied: annotated-types>=0.6.0 in /root/miniconda3/envs/llama/lib/python3.11/site-packages (from pydantic<3,>=1.9.0->openai) (0.7.0)
+Requirement already satisfied: pydantic-core==2.23.4 in /root/miniconda3/envs/llama/lib/python3.11/site-packages (from pydantic<3,>=1.9.0->openai) (2.23.4)
+Installing collected packages: jiter, distro, openai
+Successfully installed distro-1.9.0 jiter-0.7.1 openai-1.54.4

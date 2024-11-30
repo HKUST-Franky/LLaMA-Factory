@@ -1,4 +1,39 @@
 {
+  "identity_wxh": {
+    "file_name": "identity_wxh.json"
+  },
+  "rolellm_instructions": {
+    "file_name": "rolellm_instructions.json"
+  },
+  "rolellm_dpo": {
+    "file_name": "rolellm_dpo.json",
+    "ranking": true,
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "chosen": "chosen",
+      "rejected": "rejected"
+    }
+  },
+  "rolellm_dpo_all_1000": {
+    "file_name": "rolellm_dpo_all_1000.json",
+    "ranking": true,
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "chosen": "chosen",
+      "rejected": "rejected"
+    }
+  },
+  "rolellm_rolespecific_test": {
+    "file_name": "rolellm_rolespecific_test.json"
+  },
+  "rolellm_general_test": {
+    "file_name": "rolellm_general_test.json"
+  },
+  "rolellm_ground_test": {
+    "file_name": "rolellm_ground_test.json"
+  },
   "identity": {
     "file_name": "identity.json"
   },
@@ -8,6 +43,30 @@
   "alpaca_zh_demo": {
     "file_name": "alpaca_zh_demo.json"
   },
+  "创造数据集": {
+    "file_name": "train2.json"
+  },
+  "通用数据集": {
+    "file_name": "xxx.json",
+    "formatting": "sharegpt"
+  },
+  "扩充数据集": {
+    "file_name": "kuochong.json"
+  },
+  "对话增强数据集": {
+    "file_name": "duihua.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
+  },
+  "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  
   "glaive_toolcall_en_demo": {
     "file_name": "glaive_toolcall_en_demo.json",
     "formatting": "sharegpt",
@@ -24,6 +83,16 @@
       "tools": "tools"
     }
   },
+  "你的数据集": {
+    "file_name": "train.json",
+    "file_sha1": "",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "history": "history"
+    }
+  },
   "mllm_demo": {
     "file_name": "mllm_demo.json",
     "formatting": "sharegpt",
@@ -38,18 +107,18 @@
       "assistant_tag": "assistant"
     }
   },
-  "mllm_video_demo": {
-    "file_name": "mllm_video_demo.json",
+  "多模态数据集": {
+    "file_name": "mllm.json",
     "formatting": "sharegpt",
     "columns": {
-      "messages": "messages",
-      "videos": "videos"
+      "messages": "conversations",
+      "images": "images"
     },
     "tags": {
-      "role_tag": "role",
-      "content_tag": "content",
-      "user_tag": "user",
-      "assistant_tag": "assistant"
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
     }
   },
   "alpaca_en": {
@@ -186,19 +255,9 @@
   "deepctrl": {
     "ms_hub_url": "deepctrl/deepctrl-sft-data"
   },
-  "adgen_train": {
+  "adgen": {
     "hf_hub_url": "HasturOfficial/adgen",
     "ms_hub_url": "AI-ModelScope/adgen",
-    "split": "train",
-    "columns": {
-      "prompt": "content",
-      "response": "summary"
-    }
-  },
-  "adgen_eval": {
-    "hf_hub_url": "HasturOfficial/adgen",
-    "ms_hub_url": "AI-ModelScope/adgen",
-    "split": "validation",
     "columns": {
       "prompt": "content",
       "response": "summary"
@@ -206,11 +265,6 @@
   },
   "sharegpt_hyper": {
     "hf_hub_url": "totally-not-an-llm/sharegpt-hyperfiltered-3k",
-    "formatting": "sharegpt"
-  },
-  "sharegpt4": {
-    "hf_hub_url": "shibing624/sharegpt_gpt4",
-    "ms_hub_url": "AI-ModelScope/sharegpt_gpt4",
     "formatting": "sharegpt"
   },
   "ultrachat_200k": {
@@ -272,46 +326,9 @@
   "ruozhiba_gpt4": {
     "hf_hub_url": "hfl/ruozhiba_gpt4_turbo"
   },
-  "neo_sft": {
-    "hf_hub_url": "m-a-p/neo_sft_phase2",
-    "formatting": "sharegpt"
-  },
-  "magpie_pro_300k": {
-    "hf_hub_url": "Magpie-Align/Magpie-Pro-300K-Filtered",
-    "formatting": "sharegpt"
-  },
-  "magpie_ultra": {
-    "hf_hub_url": "argilla/magpie-ultra-v0.1",
-    "columns": {
-      "prompt": "instruction",
-      "response": "response"
-    }
-  },
-  "web_instruct": {
-    "hf_hub_url": "TIGER-Lab/WebInstructSub",
-    "columns": {
-      "prompt": "question",
-      "response": "answer"
-    }
-  },
   "llava_1k_en": {
     "hf_hub_url": "BUAADreamer/llava-en-zh-2k",
     "subset": "en",
-    "formatting": "sharegpt",
-    "columns": {
-      "messages": "messages",
-      "images": "images"
-    },
-    "tags": {
-      "role_tag": "role",
-      "content_tag": "content",
-      "user_tag": "user",
-      "assistant_tag": "assistant"
-    }
-  },
-  "llava_1k_zh": {
-    "hf_hub_url": "BUAADreamer/llava-en-zh-2k",
-    "subset": "zh",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
@@ -352,14 +369,6 @@
       "content_tag": "content",
       "user_tag": "user",
       "assistant_tag": "assistant"
-    }
-  },
-  "pokemon_cap": {
-    "hf_hub_url": "llamafactory/pokemon-gpt4o-captions",
-    "formatting": "sharegpt",
-    "columns": {
-      "messages": "conversations",
-      "images": "images"
     }
   },
   "mllm_pt_demo": {
@@ -445,36 +454,14 @@
       "rejected": "rejected"
     }
   },
-  "ultrafeedback": {
-    "hf_hub_url": "llamafactory/ultrafeedback_binarized",
-    "ms_hub_url": "llamafactory/ultrafeedback_binarized",
+  "DPO数据集": {
+    "file_name": "dpo.json",
     "ranking": true,
     "columns": {
       "prompt": "instruction",
+      "query": "input",
       "chosen": "chosen",
       "rejected": "rejected"
-    }
-  },
-  "rlhf_v": {
-    "hf_hub_url": "llamafactory/RLHF-V",
-    "ranking": true,
-    "formatting": "sharegpt",
-    "columns": {
-      "messages": "conversations",
-      "chosen": "chosen",
-      "rejected": "rejected",
-      "images": "images"
-    }
-  },
-  "vlfeedback": {
-    "hf_hub_url": "Zhihui/VLFeedback",
-    "ranking": true,
-    "formatting": "sharegpt",
-    "columns": {
-      "messages": "conversations",
-      "chosen": "chosen",
-      "rejected": "rejected",
-      "images": "images"
     }
   },
   "orca_pairs": {
@@ -506,8 +493,8 @@
     "hf_hub_url": "mayflowergmbh/intel_orca_dpo_pairs_de",
     "ranking": true
   },
-  "kto_en_demo": {
-    "file_name": "kto_en_demo.json",
+  "kto数据集": {
+    "file_name": "kto.json",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
@@ -534,15 +521,6 @@
       "assistant_tag": "assistant"
     }
   },
-  "ultrafeedback_kto": {
-    "hf_hub_url": "argilla/ultrafeedback-binarized-preferences-cleaned-kto",
-    "ms_hub_url": "AI-ModelScope/ultrafeedback-binarized-preferences-cleaned-kto",
-    "columns": {
-      "prompt": "prompt",
-      "response": "completion",
-      "kto_tag": "label"
-    }
-  },
   "wiki_demo": {
     "file_name": "wiki_demo.txt",
     "columns": {
@@ -551,6 +529,12 @@
   },
   "c4_demo": {
     "file_name": "c4_demo.json",
+    "columns": {
+      "prompt": "text"
+    }
+  },
+  "预训练数据集": {
+    "file_name": "pt.json",
     "columns": {
       "prompt": "text"
     }
@@ -592,18 +576,6 @@
   "skypile": {
     "hf_hub_url": "Skywork/SkyPile-150B",
     "ms_hub_url": "AI-ModelScope/SkyPile-150B",
-    "columns": {
-      "prompt": "text"
-    }
-  },
-  "fineweb": {
-    "hf_hub_url": "HuggingFaceFW/fineweb",
-    "columns": {
-      "prompt": "text"
-    }
-  },
-  "fineweb_edu": {
-    "hf_hub_url": "HuggingFaceFW/fineweb-edu",
     "columns": {
       "prompt": "text"
     }

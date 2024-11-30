@@ -44,7 +44,7 @@ logger = get_logger(__name__)
 
 DEFAULT_CACHE_DIR = "cache"
 DEFAULT_CONFIG_DIR = "config"
-DEFAULT_DATA_DIR = "data"
+DEFAULT_DATA_DIR = "/root/LLaMA-Factory/data"
 DEFAULT_SAVE_DIR = "saves"
 USER_CONFIG = "user_config.yaml"
 QUANTIZATION_BITS = ["8", "6", "5", "4", "3", "2", "1"]

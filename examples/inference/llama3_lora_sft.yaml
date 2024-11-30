@@ -1,4 +1,4 @@
-model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct
-adapter_name_or_path: saves/llama3-8b/lora/sft
+model_name_or_path: /root/autodl-tmp/Meta-Llama-3.1-8B-Instruct
+adapter_name_or_path: /root/LLaMA-Factory/src/saves/Llama-3.1-8B-Instruct/lora/train_2024-11-26-03-03-10
 template: llama3
 finetuning_type: lora
