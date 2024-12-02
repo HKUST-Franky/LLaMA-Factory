@@ -1,0 +1,32 @@
+### model
+model_name_or_path: /root/autodl-tmp/Meta-Llama-3.1-8B-Instruct
+adapter_name_or_path: /root/LLaMA-Factory/src/saves/Llama-3.1-8B-Instruct/lora/2024-11-26-14-59-53_dpo
+
+### method
+stage: sft
+do_predict: true
+finetuning_type: lora
+
+### Hyperameters
+temperature: 0.9
+top_p: 0.7
+top_k: 40
+
+### dataset
+eval_dataset: rolellm_general_test
+template: llama3
+cutoff_len: 1024
+max_samples: 10000
+overwrite_cache: true
+preprocessing_num_workers: 16
+
+
+### output
+output_dir: saves/Llama-3.1-8B-Instruct/lora/t_0.9_predict_dpollm_general_test_100
+overwrite_output_dir: true
+max_new_tokens: 100
+
+### eval
+per_device_eval_batch_size: 1
+predict_with_generate: true
+ddp_timeout: 180000000
